@@ -1,6 +1,5 @@
 package com.PhoneReport.Sprig.controller;
 
-import com.PhoneReport.Sprig.model.CommentModel;
 import com.PhoneReport.Sprig.model.PhoneModel;
 import com.PhoneReport.Sprig.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class CommentController {
@@ -40,9 +45,10 @@ public class CommentController {
 
     @RequestMapping(value = "/save_comment", method = RequestMethod.POST)
     public String saveComment(@ModelAttribute("comment") CommentModel commentModel){
+        commentModel.setDate(LocalDate.now());
         commentService.createComment(commentModel);
-
-        return "comments";
+        System.out.println("save_comment " + new SimpleDateFormat("dd-MM-yyyy").format(commentModel.getDate()));
+        return "redirect:/comments";
     }
 
     @RequestMapping("comment/edit/{imei}")

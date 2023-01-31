@@ -27,7 +27,7 @@
                 <td>${comment.date}</td>
                 <td>${comment.problem}</td>
                 <td>${comment.comment}</td>
-                <td><a href="<c:url value='/edit/${comment.imei}' />">Edit</a></td>
+                <td><a href="<c:url value='comment/edit/${comment.imei}' />">Edit</a></td>
                 <td><a href="delete/${comment.imei}">Delete</a></td>
             </tr>
         </c:forEach>
