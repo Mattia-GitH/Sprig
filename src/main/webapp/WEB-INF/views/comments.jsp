@@ -1,6 +1,7 @@
 
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +23,16 @@
         </thead>
         <tbody>
         <c:forEach items="${commentList}" var="comment">
+            <fmt:formatDate value="${comment.date}" var="formattedDate"
+                            type="date" pattern="MM-dd-yyyy" />
             <tr>
                 <td>${comment.imei}</td>
-                <td>${comment.date}</td>
                 <td>${comment.problem}</td>
+                <td>${formattedDate}</td>
                 <td>${comment.comment}</td>
+
                 <td><a href="<c:url value='comment/edit/${comment.imei}' />">Edit</a></td>
-                <td><a href="delete/${comment.imei}">Delete</a></td>
+                <td><a href="/comment/delete/${comment.imei}">Delete</a></td>
             </tr>
         </c:forEach>
         </tbody>

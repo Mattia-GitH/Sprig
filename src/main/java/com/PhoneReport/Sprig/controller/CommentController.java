@@ -11,11 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAccessor;
+import java.util.Date;
 import java.util.List;
-import java.util.Locale;
+
 
 @Controller
 public class CommentController {
@@ -28,7 +26,7 @@ public class CommentController {
     }
 
     @RequestMapping("comments")
-    public String commentList(Model model){
+    public String commentList(Model model) {
         List<CommentModel> commentModelList = commentService.listComments();
         model.addAttribute("commentList", commentModelList);
 
@@ -36,18 +34,19 @@ public class CommentController {
     }
 
     @RequestMapping("/create_comment")
-    public String addComment(Model model){
+    public String addComment(Model model) {
         CommentModel commentModel = new CommentModel();
-        model.addAttribute("comment",commentModel);
+        model.addAttribute("comment", commentModel);
 
         return "newComment";
     }
 
     @RequestMapping(value = "/save_comment", method = RequestMethod.POST)
-    public String saveComment(@ModelAttribute("comment") CommentModel commentModel){
-        commentModel.setDate(LocalDate.now());
+    public String saveComment(@ModelAttribute("comment") CommentModel commentModel) {
+        Date date = new Date(System.currentTimeMillis());
+        commentModel.setDate(date);
         commentService.createComment(commentModel);
-        System.out.println("save_comment " + new SimpleDateFormat("dd-MM-yyyy").format(commentModel.getDate()));
+
         return "redirect:/comments";
     }
 
@@ -66,8 +65,8 @@ public class CommentController {
         return "comments";
     }
 
-    @RequestMapping(value="comment/delete/{imei}",method = RequestMethod.GET)
-    public String delete(@PathVariable Long imei){
+    @RequestMapping(value = "comment/delete/{imei}", method = RequestMethod.GET)
+    public String delete(@PathVariable Long imei) {
         commentService.delete(imei);
         return "comments";
     }
