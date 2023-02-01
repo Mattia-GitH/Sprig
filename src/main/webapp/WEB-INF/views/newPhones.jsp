@@ -20,16 +20,15 @@
         </table>
         <input type="submit" value="Input" />
     </form>
+
+
+
     <c:set var="decode" value="${fn:split(param.qr_code, ',')}" />
     <form:form method="post" modelAttribute="phone" action="/save_phone">
         <table border="1">
             <tr>
                 <th colspan="2">New Phone</th>
             </tr>
-
-
-
-
             <tr>
                 <td><form:label path="imei">imei:</form:label></td>
                 <td><form:input path="imei" value="${decode[0]}"></form:input></td>
@@ -38,10 +37,16 @@
                 <td><form:label path="model">model:</form:label></td>
                 <td><form:input path="model" value="${decode[1]}"></form:input></td>
             </tr>
-
             <tr>
                 <td><form:label path="gb">GB:</form:label></td>
-                <td><form:input path="gb"></form:input></td>
+                <td>
+                    <c:set var="memories" value="32,64,128,512" scope="application" />
+                    <select class="mem" title="Memory Obtained">
+                        <c:forEach items="${fn:split(memories, ',')}" var="memory">
+                            <option path="gb" value="${memory}" ${qd.memory == memory ? 'selected' : ''}>${memory}</option>
+                        </c:forEach>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td><form:label path="color">Color:</form:label></td>

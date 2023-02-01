@@ -39,10 +39,10 @@ public class PhoneController {
     }
 
     @RequestMapping(value = "/save_phone", method = RequestMethod.POST)
-    public String savePhone(@ModelAttribute("new_comment") PhoneModel phoneModel){
+    public String savePhone(@ModelAttribute("phone") PhoneModel phoneModel){
         phoneService.createPhone(phoneModel);
 
-        return "phones";
+        return "redirect:/phones";
     }
 
     @RequestMapping("phone/edit/{imei}")

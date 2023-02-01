@@ -10,7 +10,6 @@ import java.util.Objects;
 @Table(name = "PHONE_TBL")
 public class PhoneEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "IMEI")
     private Long imei;
 

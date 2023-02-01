@@ -12,7 +12,6 @@ import java.util.Objects;
 public class TestEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long imei;
 
     @Column(name = "WIFI")
