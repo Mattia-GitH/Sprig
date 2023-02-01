@@ -11,7 +11,7 @@
 <body>
 <div align="center">
     <a href="/create_comment">Add Comment</a>
-    <h1>Users List</h1>
+    <h1>Comments List</h1>
     <table border="1" cellpadding="10">
         <thead>
         <tr>

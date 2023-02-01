@@ -19,10 +19,6 @@
                 <td><form:label path="imei">imei:</form:label></td>
                 <td><form:input path="imei"></form:input></td>
             </tr>
-            <!--<tr>
-                <td><form:label path="date">date:</form:label></td>
-                <td><form:input path="date" pattern="dd-MM-yyyy"></form:input></td>
-            </tr>-->
             <tr>
                 <td><form:label path="problem">problem:</form:label></td>
                 <td><form:input path="problem"></form:input></td>

@@ -35,7 +35,7 @@ public class PhoneController {
         PhoneModel phoneModel = new PhoneModel();
         model.addAttribute("phone",phoneModel);
 
-        return "phones";
+        return "newPhones";
     }
 
     @RequestMapping(value = "/save_phone", method = RequestMethod.POST)
