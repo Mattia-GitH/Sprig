@@ -62,12 +62,12 @@ public class CommentController {
     public String updateComment(@PathVariable(name = "imei") Long imei, @ModelAttribute("comment") CommentModel commentModel) {
         commentService.updateComment(commentModel, imei);
 
-        return "comments";
+        return "redirect:/comments";
     }
 
     @RequestMapping(value = "comment/delete/{imei}", method = RequestMethod.GET)
     public String delete(@PathVariable Long imei) {
         commentService.delete(imei);
-        return "comments";
+        return "redirect:/comments";
     }
 }

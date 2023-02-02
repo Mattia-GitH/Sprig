@@ -27,7 +27,7 @@ public class PhoneController {
         List<PhoneModel> phoneModels = phoneService.listPhones();
         model.addAttribute("phoneList", phoneModels);
 
-        return "phones";
+        return "redirect:/phones";
     }
 
     @RequestMapping("/create_phone")
@@ -35,7 +35,7 @@ public class PhoneController {
         PhoneModel phoneModel = new PhoneModel();
         model.addAttribute("phone",phoneModel);
 
-        return "newPhones";
+        return "newPhone";
     }
 
     @RequestMapping(value = "/save_phone", method = RequestMethod.POST)
@@ -57,13 +57,13 @@ public class PhoneController {
     public String updatePhone(@PathVariable(name = "imei") Long imei, @ModelAttribute("phone") PhoneModel phoneModel) {
         phoneService.updatePhone(phoneModel, imei);
 
-        return "phones";
+        return "redirect:/phones";
     }
 
     @RequestMapping(value="phone/delete/{imei}",method = RequestMethod.GET)
     public String delete(@PathVariable Long imei){
         phoneService.delete(imei);
-        return "phones";
+        return "redirect:/phones";
     }
 
 }
