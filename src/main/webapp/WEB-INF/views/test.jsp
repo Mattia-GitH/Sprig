@@ -34,6 +34,8 @@
         </thead>
         <tbody>
         <c:forEach items="${testList}" var="test">
+            <fmt:formatDate value="${test.date}" var="formattedDate"
+                            type="date" pattern="MM-dd-yyyy" />
             <tr>
                 <td>${test.imei}</td>
                 <td>${test.wifi}</td>
@@ -49,7 +51,7 @@
                 <td>${test.flash}</td>
                 <td>${test.display}</td>
                 <td>${test.face_id}</td>
-                <td>${test.date}</td>
+                <td>${formattedDate}</td>
 
                 <td><a href="<c:url value='test/edit/${test.imei}' />">Edit</a></td>
                 <td><a href="/test/delete/${test.imei}">Delete</a></td>

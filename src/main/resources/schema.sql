@@ -50,7 +50,7 @@ CREATE TABLE TEST_TBL (
   FLASH tinyint NOT NULL,
   DISPLAY tinyint NOT NULL,
   FACE_ID tinyint NOT NULL,
-  DATE tinyint NOT NULL
+  DATE date NOT NULL
 ) ;
 
 
