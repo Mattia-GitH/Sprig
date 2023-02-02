@@ -4,7 +4,7 @@ package com.PhoneReport.Sprig.entity;
 //import jakarta.persistence.*;
 import javax.persistence.*;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity

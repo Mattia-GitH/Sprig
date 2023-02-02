@@ -27,7 +27,7 @@ public class PhoneController {
         List<PhoneModel> phoneModels = phoneService.listPhones();
         model.addAttribute("phoneList", phoneModels);
 
-        return "redirect:/phones";
+        return "phones";
     }
 
     @RequestMapping("/create_phone")
