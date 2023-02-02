@@ -5,13 +5,13 @@ import java.util.Objects;
 public class PhoneModel {
     private Long imei;
     private String model;
-    private int gb;
+    private String gb;
     private String color;
 
     public PhoneModel() {
     }
 
-    public PhoneModel(Long imei, String model, int gb, String color) {
+    public PhoneModel(Long imei, String model, String gb, String color) {
         this.imei = imei;
         this.model = model;
         this.gb = gb;
@@ -34,11 +34,11 @@ public class PhoneModel {
         this.model = model;
     }
 
-    public int getGb() {
+    public String getGb() {
         return gb;
     }
 
-    public void setGb(int gb) {
+    public void setGb(String gb) {
         this.gb = gb;
     }
 
@@ -55,10 +55,7 @@ public class PhoneModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PhoneModel that = (PhoneModel) o;
-        return gb == that.gb &&
-                Objects.equals(imei, that.imei) &&
-                Objects.equals(model, that.model) &&
-                Objects.equals(color, that.color);
+        return Objects.equals(imei, that.imei) && Objects.equals(model, that.model) && Objects.equals(gb, that.gb) && Objects.equals(color, that.color);
     }
 
     @Override
@@ -71,7 +68,7 @@ public class PhoneModel {
         return "PhoneModel{" +
                 "imei=" + imei +
                 ", model='" + model + '\'' +
-                ", gb=" + gb +
+                ", gb='" + gb + '\'' +
                 ", color='" + color + '\'' +
                 '}';
     }

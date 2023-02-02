@@ -39,14 +39,18 @@
             </tr>
             <tr>
                 <td><form:label path="gb">GB:</form:label></td>
+
                 <td>
-                    <c:set var="memories" value="32,64,128,512" scope="application" />
-                    <select class="mem" title="Memory Obtained">
-                        <c:forEach items="${fn:split(memories, ',')}" var="memory">
-                            <option path="gb" value="${memory}" ${qd.memory == memory ? 'selected' : ''}>${memory}</option>
-                        </c:forEach>
-                    </select>
+                    <form:select class="selectpicker form-control select-di" path="gb" id="east-order" isChanged="false">
+                        <form:option value="32">32</form:option>
+                        <form:option value="64">64</form:option>
+                        <form:option value="128">128</form:option>
+                        <form:option value="256">256</form:option>
+                        <form:option value="512">512</form:option>
+                    </form:select>
                 </td>
+
+
             </tr>
             <tr>
                 <td><form:label path="color">Color:</form:label></td>

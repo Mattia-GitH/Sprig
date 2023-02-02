@@ -17,7 +17,7 @@ public class PhoneEntity {
     private String model;
 
     @Column(name = "GB")
-    private int gb;
+    private String gb;
 
     @Column(name = "COLOR")
     private String color;
@@ -26,7 +26,7 @@ public class PhoneEntity {
     public PhoneEntity() {
     }
 
-    public PhoneEntity(Long imei, String model, int gb, String color) {
+    public PhoneEntity(Long imei, String model, String gb, String color) {
         this.imei = imei;
         this.model = model;
         this.gb = gb;
@@ -49,11 +49,11 @@ public class PhoneEntity {
         this.model = model;
     }
 
-    public int getGb() {
+    public String getGb() {
         return gb;
     }
 
-    public void setGb(int gb) {
+    public void setGb(String gb) {
         this.gb = gb;
     }
 
@@ -70,10 +70,7 @@ public class PhoneEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PhoneEntity that = (PhoneEntity) o;
-        return gb == that.gb &&
-                Objects.equals(imei, that.imei) &&
-                Objects.equals(model, that.model) &&
-                Objects.equals(color, that.color);
+        return Objects.equals(imei, that.imei) && Objects.equals(model, that.model) && Objects.equals(gb, that.gb) && Objects.equals(color, that.color);
     }
 
     @Override
@@ -86,7 +83,7 @@ public class PhoneEntity {
         return "PhoneEntity{" +
                 "imei=" + imei +
                 ", model='" + model + '\'' +
-                ", gb=" + gb +
+                ", gb='" + gb + '\'' +
                 ", color='" + color + '\'' +
                 '}';
     }
