@@ -1,82 +1,94 @@
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <title>New Comment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fira+Mono|Montserrat:800'><link rel="stylesheet" href="https://static.staticsave.com/resources/style.css">
+
+    <title>Application Report</title>
 </head>
 <body>
-<div align="center">
-    <form:form method="post" modelAttribute="test" action="/save_test">
-        <table border="1">
-            <tr>
-                <th colspan="2">New Test</th>
-            </tr>
-            <tr>
-                <td><form:label path="imei">imei:</form:label></td>
-                <td><form:input path="imei"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="wifi">wifi:</form:label></td>
-                <td><form:input path="wifi"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="bluetooth">bluetooth:</form:label></td>
-                <td><form:input path="bluetooth"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="gps">gps:</form:label></td>
-                <td><form:input path="gps"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="battery">battery:</form:label></td>
-                <td><form:input path="battery"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="proximity_sensor">proximity_sensor:</form:label></td>
-                <td><form:input path="proximity_sensor"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="vibrations">vibrations:</form:label></td>
-                <td><form:input path="vibrations"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="buttons">buttons:</form:label></td>
-                <td><form:input path="buttons"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="microphones">microphones:</form:label></td>
-                <td><form:input path="microphones"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="speakers">speakers:</form:label></td>
-                <td><form:input path="speakers"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="cameras">cameras:</form:label></td>
-                <td><form:input path="cameras"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="flash">flash:</form:label></td>
-                <td><form:input path="flash"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="display">display:</form:label></td>
-                <td><form:input path="display"></form:input></td>
-            </tr>
-            <tr>
-                <td><form:label path="face_id">face_id:</form:label></td>
-                <td><form:input path="face_id"></form:input></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="submit"/></td>
-            </tr>
-        </table>
-    </form:form>
 
+<a href="https://codepen.io/Vikaspatel/details/abvgBQa">Original</a>
+
+<div class="container">
+    <div class="wrapper">
+        <div class="tabs-wrapper">
+            <span class="left scroller-btn"><</span>
+            <ul id="scroller" class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+                <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+                <li><a data-toggle="tab" href="#menu4">Menu 4</a></li>
+                <li><a data-toggle="tab" href="#menu5">Menu 5</a></li>
+                <li><a data-toggle="tab" href="#menu6">Menu 6</a></li>
+                <li><a data-toggle="tab" href="#menu7">Menu 7</a></li>
+                <li><a data-toggle="tab" href="#menu8">Menu 8</a></li>
+                <li><a data-toggle="tab" href="#menu9">Menu 9</a></li>
+                <li><a data-toggle="tab" href="#menu10">Menu 10</a></li>
+            </ul>
+            <span id="right" class="right scroller-btn">></span>
+        </div>
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h3>HOME</h3>
+                <p>Some content.</p>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <p>Some content in menu 1.</p>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <p>Some content in menu 3.</p>
+            </div>
+            <div id="menu4" class="tab-pane fade">
+                <h3>Menu 4</h3>
+                <p>Some content in menu 4.</p>
+            </div>
+            <div id="menu5" class="tab-pane fade">
+                <h3>Menu 5</h3>
+                <p>Some content in menu 5.</p>
+            </div>
+            <div id="menu6" class="tab-pane fade">
+                <h3>Menu 6</h3>
+                <p>Some content in menu 6.</p>
+            </div>
+            <div id="menu7" class="tab-pane fade">
+                <h3>Menu 7</h3>
+                <p>Some content in menu 7.</p>
+            </div>
+            <div id="menu8" class="tab-pane fade">
+                <h3>Menu 8</h3>
+                <p>Some content in menu 8.</p>
+            </div>
+            <div id="menu9" class="tab-pane fade">
+                <h3>Menu 9</h3>
+                <p>Some content in menu 9.</p>
+            </div>
+            <div id="menu10" class="tab-pane fade">
+                <h3>Menu 10</h3>
+                <p>Some content in menu 10.</p>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script  src="https://static.staticsave.com/resources/script.js"></script>
 </body>
 </html>

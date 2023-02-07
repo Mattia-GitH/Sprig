@@ -51,7 +51,7 @@ public class TestConverter {
         entity.setFlash(model.isFlash());
         entity.setDisplay(model.isDisplay());
         entity.setFace_id(model.isFace_id());
-        entity.setDate((Date) model.getDate());
+        entity.setDate(model.getDate());
         return entity;
     }
 

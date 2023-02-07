@@ -63,6 +63,7 @@ public class TestServiceImp implements TestService {
             update.setFlash(testModel.isFlash());
             update.setDisplay(testModel.isDisplay());
             update.setFace_id(testModel.isFace_id());
+            repository.save(update);
             return converter.toModel(update);
         } else {
             throw new TestNotFoundException("Test not found imei:" + imei);

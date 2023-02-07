@@ -63,4 +63,10 @@ public class TestController {
         return "redirect:/test";
     }
 
+    @RequestMapping(value="test/delete/{imei}",method = RequestMethod.GET)
+    public String delete(@PathVariable Long imei){
+        testService.delete(imei);
+        return "redirect:/test";
+    }
+
 }
