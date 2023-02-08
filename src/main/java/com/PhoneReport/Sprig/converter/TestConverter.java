@@ -4,7 +4,6 @@ import com.PhoneReport.Sprig.entity.TestEntity;
 import com.PhoneReport.Sprig.model.TestModel;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 

@@ -14,17 +14,16 @@
                 <th colspan="2">New test</th>
             </tr>
             <tr>
-                <td colspan="2"><form:label path="imei">imei:</form:label></td>
-            <tr>
-            <tr>
-                <td colspan="2"><form:label path="date">date:</form:label></td>
-            <tr>
-                <td><form:label path="bluetooth">bluetooth:</form:label></td>
-                <td><form:input path="bluetooth"></form:input></td>
+                <td><form:label path="imei">imei:</form:label></td>
+                <td><form:input path="imei"></form:input></td>
             </tr>
             <tr>
                 <td><form:label path="wifi">wifi:</form:label></td>
-                <td><form:input path="wifi"></form:input></td>
+                <td><form:checkbox path="wifi"></form:checkbox></td>
+            </tr>
+            <tr>
+                <td><form:label path="bluetooth">bluetooth:</form:label></td>
+                <td><form:input path="bluetooth"></form:input></td>
             </tr>
             <tr>
                 <td><form:label path="gps">gps:</form:label></td>
@@ -35,7 +34,7 @@
                 <td><form:input path="battery"></form:input></td>
             </tr>
             <tr>
-                <td><form:label path="proximity_sensor">proximity sensor:</form:label></td>
+                <td><form:label path="proximity_sensor">proximity_sensor:</form:label></td>
                 <td><form:input path="proximity_sensor"></form:input></td>
             </tr>
             <tr>
@@ -67,7 +66,7 @@
                 <td><form:input path="display"></form:input></td>
             </tr>
             <tr>
-                <td><form:label path="face_id">Face ID / Touch ID:</form:label></td>
+                <td><form:label path="face_id">face id / touch id:</form:label></td>
                 <td><form:input path="face_id"></form:input></td>
             </tr>
             <tr>
