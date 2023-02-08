@@ -31,6 +31,10 @@
                     <li><a data-toggle="tab" href="#menu8">Menu 8</a></li>
                     <li><a data-toggle="tab" href="#menu9">Menu 9</a></li>
                     <li><a data-toggle="tab" href="#menu10">Menu 10</a></li>
+                    <li><a data-toggle="tab" href="#menu11">Menu 11</a></li>
+                    <li><a data-toggle="tab" href="#menu12">Menu 12</a></li>
+                    <li><a data-toggle="tab" href="#menu13">Menu 13</a></li>
+                    <li><a data-toggle="tab" href="#menu14">Menu 14</a></li>
                 </ul>
                 <span id="right" class="right scroller-btn">></span>
             </div>
@@ -78,6 +82,22 @@
                 <div id="menu10" class="tab-pane fade">
                     <h3>Menu 10</h3>
                     <p>Some content in menu 10.</p>
+                </div>
+                <div id="menu11" class="tab-pane fade">
+                    <h3>Menu 11</h3>
+                    <p>Some content in menu 11.</p>
+                </div>
+                <div id="menu12" class="tab-pane fade">
+                    <h3>Menu 12</h3>
+                    <p>Some content in menu 12.</p>
+                </div>
+                <div id="menu13" class="tab-pane fade">
+                    <h3>Menu 13</h3>
+                    <p>Some content in menu 13.</p>
+                </div>
+                <div id="menu14" class="tab-pane fade">
+                    <h3>Menu 14</h3>
+                    <p>Some content in menu 14.</p>
                 </div>
             </div>
         </div>
